@@ -33,10 +33,12 @@ Find the sum of all the multiples of 3 or 5 below 1000.
     def solveFunc(n: Int): Int =
         (1 until n).filter(v => (v % 3 == 0 || v % 5 == 0)).reduceLeft(_ + _);System.out.println("""solveFunc: (n: Int)Int""");$skip(18); val res$8 = 
     solveFunc(10);System.out.println("""res8: Int = """ + $show(res$8));$skip(20); val res$9 = 
-    solveFunc(1000);System.out.println("""res9: Int = """ + $show(res$9));$skip(128); val res$10 = 
+    solveFunc(1000);System.out.println("""res9: Int = """ + $show(res$9));$skip(106); val res$10 = 
     
     
     // one-liner
+    (1 until 1000).filter(n => (n % 3 == 0 || n % 5 == 0)).reduceLeft(_ + _);System.out.println("""res10: Int = """ + $show(res$10));$skip(95); val res$11 = 
+    
     // FINAL SOLUTION
-    (1 until 1000).filter(n => (n % 3 == 0 || n % 5 == 0)).reduceLeft(_ + _);System.out.println("""res10: Int = """ + $show(res$10))}
+    (1 until 1000).view.filter(n => (n % 3 == 0 || n % 5 == 0)).sum;System.out.println("""res11: Int = """ + $show(res$11))}
 }
